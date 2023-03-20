@@ -20,7 +20,7 @@ public class Student {
 	private int studentId;
 	private String studentName;
 
-	@OneToMany(mappedBy = "student", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
 	private List<Course> courses;
 
 	public int getStudentId() {

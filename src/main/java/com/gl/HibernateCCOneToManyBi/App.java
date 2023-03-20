@@ -33,28 +33,28 @@ public class App {
 		student.setCourses(courses);
 
 		// Inserting data in student and course
-//		try {
-//			Session session = factory.openSession();
-//			Transaction tx = session.beginTransaction();
-//			session.persist(student);
-//			tx.commit();
-//			session.close();
-//		} catch (HibernateException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		try {
+			Session session = factory.openSession();
+			Transaction tx = session.beginTransaction();
+			session.persist(student);
+			tx.commit();
+			session.close();
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		// Delete course without affecting student
-//		try {
-//			Session session = factory.openSession();
-//			Transaction tx = session.beginTransaction();
-//			Course course = session.get(Course.class, 2);
-//			session.remove(course);
-//			tx.commit();
-//			session.close();
-//		} catch (HibernateException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		try {
+			Session session = factory.openSession();
+			Transaction tx = session.beginTransaction();
+			Course course = session.get(Course.class, 2);
+			session.remove(course);
+			tx.commit();
+			session.close();
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

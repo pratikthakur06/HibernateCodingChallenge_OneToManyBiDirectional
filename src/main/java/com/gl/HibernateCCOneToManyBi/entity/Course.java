@@ -17,7 +17,7 @@ public class Course {
 	private int courseId;
 	private String courseName;
 
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH})
 	@JoinColumn(name = "studentId")
 	private Student student;
 
